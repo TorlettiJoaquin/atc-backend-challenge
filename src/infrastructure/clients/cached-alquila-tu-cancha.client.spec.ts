@@ -79,7 +79,6 @@ describe('CachedAlquilaTuCanchaClient', () => {
 
       await client.getClubs(placeId);
 
-      // Should store index for each club
       expect(cache.set).toHaveBeenCalledWith(
         CacheKeys.clubToPlace(1),
         placeId,

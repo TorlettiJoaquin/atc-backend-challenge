@@ -40,10 +40,7 @@ describe('SlotBookedHandler', () => {
 
     await handler.handle(event);
 
-    // Should delete slots cache for the specific date
     expect(cache.del).toHaveBeenCalledWith('slots:166:733:2022-08-25');
-
-    // Should delete search cache
     expect(cache.del).toHaveBeenCalledWith(
       'search:ChIJW9fXNZNTtpURV6VYAumGQOw:2022-08-25',
     );
